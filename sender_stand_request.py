@@ -2,16 +2,14 @@ import configuration
 import requests
 import data
 
+def get_new_user_token(sender_stand_request=None):
+    # Crear un nuevo usuario
+    user_body = data.user_body
+    resp_user = sender_stand_request.post_new_user(user_body)
+    # Guardar el token de autenticación
+    return resp_user.json()["authToken"]
 
-def post_new_user (body):
-    return requests.post(configuration.URL_SERVICE+configuration.CREATE_USER_PATH,
-                         json=body,
-                         headers=data.headers
-                         )
-
-
-response=post_new_user(data.user_body).json()
-auth_token=response['auth_token']
+auth_token = get_new_user_token()
 
 Headers2= {
     "content_type":"application/json",
@@ -21,5 +19,4 @@ Headers2= {
 def post_personal_kit(kitbody):
     return requests.post(configuration.URL_SERVICE+configuration.KITS_PATH,
                          json=kitbody,
-                         headers=Headers2
-                          )
+                         headers=Headers2)
