@@ -20,7 +20,6 @@ def test_numero_permitido_de_caracteres_1():
     kit_body = get_kit_body("a")
     positive_assert_for_kit_body(kit_body)
 
-
 #2 el numero permitido de caracteres (511)
 
 def test_numero_permitido_de_caracteres_511():
@@ -41,14 +40,14 @@ def test_numero_permitido_de_caracteres_512():
 
 #5 	Se permiten caracteres especiales (№%@)
 
-def test_numero_caracteres_especiales_permitidos_(№%@):
-    kit_body = get_kit_body("№%@")
+def test_numero_caracteres_especiales_permitidos_():
+    kit_body = get_kit_body("\№%@\,")
     positive_assert_for_kit_body(kit_body)
 
 #6 Se permiten espacios (A Aaa)
 
-def test_se_permiten_espacios(A Aaa):
-    kit_body = get_kit_body("A Aaa")
+def test_se_permiten_espacios( Aaa):
+    kit_body = get_kit_body(" A Aaa ")
     positive_assert_for_kit_body(kit_body)
 
  #7 Se permiten números (123)
