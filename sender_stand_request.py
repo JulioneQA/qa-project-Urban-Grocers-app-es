@@ -20,3 +20,7 @@ def post_personal_kit(kitbody):
     return requests.post(configuration.URL_SERVICE+configuration.KITS_PATH,
                          json=kitbody,
                          headers=Headers2)
+
+
+def post_new_client_kit(kit_body, name):
+    return None
