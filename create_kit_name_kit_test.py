@@ -56,12 +56,12 @@ def test_numero_permitido_de_caracteres_512():
 #5 	Se permiten caracteres especiales ()
 
 def test_numero_caracteres_especiales_permitidos_():
-    positive_assert("\"№%@\",")
+    positive_assert("№%@")
 
 
 #6 Se permiten espacios (A Aaa)
 
-def test_se_permiten_espacios( Aaa):
+def test_se_permiten_espacios():
     positive_assert(" A Aaa ")
 
  #7 Se permiten números (123)
@@ -78,5 +78,5 @@ def test_el_parametro_no_se_pasa_en_la_solicitud():
 
 #9 	Se ha pasado un tipo de parámetro diferente (número): kit_body = ( "name": 123 )
 
-def test_el_parametro_no_se_pasa_en_la_solicitud():
+def test_el_parametro_no_se_pasa_en_solicitud():
     negative_assert(123)
