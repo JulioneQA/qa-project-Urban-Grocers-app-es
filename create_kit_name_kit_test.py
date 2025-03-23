@@ -78,5 +78,5 @@ def test_el_parametro_no_se_pasa_en_la_solicitud():
 
 #9 	Se ha pasado un tipo de parámetro diferente (número): kit_body = ( "name": 123 )
 
-def test_el_parametro_no_se_pasa_en_solicitud():
+def test_tipo_parametro_diferente():
     negative_assert(123)
